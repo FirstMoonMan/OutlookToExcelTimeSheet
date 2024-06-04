@@ -96,7 +96,7 @@ With myCalItems
   .IncludeRecurrences = True
 End With
 '
-StringToCheck = "[Start] >= " & Quote(StartDate & " 12:00 AM") & " AND [End] <= " & Quote(EndDate & " 11:59 PM")
+StringToCheck = "[Start] >= " & Quote(StartDate & " 12:00 AM") & " AND [End] <= " & Quote(EndDate & " 11:59 PM" & Chr(34) & " AND [Subject] >= " & Chr(34) & "@Code:" & Chr(34) & " AND [Subject] < " & Chr(34) & "@Code;")
 Debug.Print StringToCheck
 '
 Set ItemstoCheck = myCalItems.Restrict(StringToCheck)
